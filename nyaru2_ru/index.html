@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="UTF-8">
+    <title>にゃるるとの思い出展 |にゃるるについて</title>
+    <style>
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      background-color: #abfcff;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      text-align: left;
+      margin: 20px;
+    }
+
+
+    h2 {
+      font-size: 28px;
+      color: #333;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+    }
+
+    .gallery {
+      display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .item {
+    width: 300px;
+    text-align: center;
+    font-size: 24px;
+    }
+
+    /* ===== モーダル設定 ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ccc;
+    }
+
+  .center-text {
+    text-align: center;
+  }
+  .text-box {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px 25px;
+    text-align: left;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between; /* 左寄せにする */
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .header-left {
+    font-size: 36px;
+  }
+
+  .header-right {
+    display: flex;
+    gap: 36px;
+    margin-left: auto;
+  }
+
+  .header-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #0000EE;
+  }
+
+  .header-link:hover {
+    color: #002fff;
+  }
+
+  .header-left h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+
+    </style>
+    </head>
+    <body>
+      <header class="header">
+        <div class="header-left">
+          <h1>にゃるるとの思い出展 | にゃるるについて</h1>
+        </div>
+        <div class="header-right">
+          <a href="http://kisaragirenn.f5.si:7904" class="header-link">ホーム</a>
+          <a href="http://kisaragirenn.f5.si:7904/nyaru2_ru/OW2/" class="header-link">オーバーウォッチ２編</a>
+          <a href="http://kisaragirenn.f5.si:7904/nyaru2_ru/Splatoon/" class="header-link">スプラトゥーン編</a>
+          <a href="http://kisaragirenn.f5.si:7904/nyaru2_ru/other/" class="header-link">その他</a>
+        </div>
+      </header>
+      <h2>瑠羽にゃるるとは？</h2>
+      <p class="center-text">瑠羽にゃるるは、現在準備中のVtuber配信者でTwitchで配信しています</p><br>
+      <h2>主な配信内容</h2>
+      <p class="center-text">OW2、スプラトゥーン3の参加型。</p>
+      <p class="center-text">最近ではR.E.P.O.、雀魂の配信もしています。</p><br>
+      <h2>プロフィール写真</h2>
+      <div class="gallery">
+        <div class="item">
+          <img src="/nyaru2_ru/img/profile.png" alt="にゃるるのプロフィール" onclick="openModal(this)">
+          <p>配信時のスクショの利用</p>
+        </div>
+      </div><br>
+      <h2>にゃるるについて</h2>
+      <div class="text-box">
+      <p>​瑠羽 にゃるる(ru nyaruru)</p>
+      <p>■誕生日：7月3日</p>
+
+      <p>■身長：153cm</p>
+
+      <p>■体重：マカロン22個分</p>
+
+      <p>■足のサイズ：22cm</p>
+
+      <p>■好きなもの：猫、アニメ​、ゲーム</p>
+
+      <p>■Twitch初配信日：2025年4月26日</p><br>
+      <p>参照:<a href="https://nyaru2ru.wixsite.com/mysite/">にゃるるの公式サイト</a></p>
+      </div>
+      <br>
+      <br>
+      <h2>リンク集</h2>
+      <p class="center-text"><a href="https://nyaru2ru.wixsite.com/mysite/">にゃるるの公式サイト</a></p>
+      <p class="center-text"><a href="https://x.com/nyaru2_ru">にゃるるのX(旧Twitter)</a></p>
+      <p class="center-text"><a href="https://www.twitch.tv/nyaru2_ru">にゃるるのTwitch</a></p>
+      <p class="center-text"><a href="https://www.youtube.com/@nyaru2_ru">にゃるるのYouTubeチャンネル</a></p>
+      <p class="center-text"><a href="https://www.amazon.co.jp/hz/wishlist/ls/1VME9DZ97O7WA?ref_=wl_share">Amazon</a></p>
+
+
+
+        <!-- モーダル -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+    </body>
+</html>
