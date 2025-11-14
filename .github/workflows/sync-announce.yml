@@ -1,0 +1,39 @@
+name: Sync announce to maintenance
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "announce/**"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Switch to maintenance branch
+        run: |
+          git fetch origin maintenance:maintenance || git checkout -b maintenance
+          git switch maintenance
+          git reset --hard origin/maintenance
+
+      - name: Copy announce from main
+        run: |
+          git checkout main -- announce
+
+      - name: Commit and push changes
+        run: |
+          git add announce
+          git diff --cached --quiet || git commit -m "Auto-sync announce from main"
+          git push origin maintenance
