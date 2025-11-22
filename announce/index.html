@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>にゃるるとの思い出展 |お知らせ</title>
 
-    <!-- けいふぉんと読み込み（CDN）-->
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-
     <style>
+
+              @font-face {
+    font-family: "KFhimaji";
+    src: url("/fonts/KFhimaji.woff2") format("woff2"),
+         url("/fonts/KFhimaji.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+        }
+
         body {
+            font-family: "KFhimaji";
             margin: 0;
             padding: 20px;
             background: #abfcff;
@@ -70,7 +77,7 @@
             }
         }
 
-        .top-right {
+                .top-right {
             position: absolute;
             top: 20px;
             right: 20px;
@@ -108,7 +115,7 @@
             </div>
         </div>
 
-        <div class="news-card">
+                <div class="news-card">
             <div class="news-title">メンテナンス延長のお知らせ</div>
             <div class="news-date">2025/11/16</div>
             <div class="news-text">
@@ -122,32 +129,32 @@
             <div class="news-text">
                 サーバーメンテナンスが無事終了しました。ご協力ありがとうございました。
             </div>
+        </div>
 
                 <div class="news-card">
             <div class="news-title">展示物追加のお知らせ</div>
             <div class="news-date">2025/11/19</div>
             今まで何も展示してなかったSplatoonエリアに写真を追加しました<br>
             これでもまだ一部なので今後の追加をお楽しみに！
-            <div class="news-text">        
+            <div class="news-text">   
             </div>
+        </div>
 
                 <div class="news-card">
             <div class="news-title">不具合修正</div>
             <div class="news-date">2025/11/17</div>
-            <div class="news-text"> 
-            Splatoonエリアの文字が左側に寄ってしまう不具合を修正しました。<br>
-            ぜひもう一度ご覧にいってはどうでしょうか？
-            <a href="/nyaru2_ru/Splatoon/">スプラトゥーンエリア</a>
+            <div class="news-text">
+                Splatoonエリアの文字が左側に寄ってしまう不具合を修正しました。<br>
+                ぜひもう一度ご覧にいってはどうでしょうか？
+                <a href="/nyaru2_ru/Splatoon/">スプラトゥーンエリア</a>
             </div>
-            </div>
-
         </div>
+
+    </div>
 
         <div class="top-right">
             <a href="/">ホーム</a>
         </div>
-
-    </div>
 
 </body>
 </html>
