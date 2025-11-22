@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Somomo";
-  src: url("../fonts/Keifont.woff2") format("woff2"),
-       url("../fonts/Keifont.woff") format("woff");
+  src: url("/fonts/Keifont.woff2") format("woff2"),
+       url("/fonts/Keifont.woff") format("woff");
   font-display: swap;
 }
 
@@ -10,7 +10,8 @@
 }
 
 body {
-    background-color: #abfcff;
+  font-family: var(--font-main);
+  background-color: #abfcff;
 }
 
 h1 {
