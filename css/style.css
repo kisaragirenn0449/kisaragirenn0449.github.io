@@ -1,4 +1,14 @@
+<tyle>
+@font-face {
+  font-family: "Somomo";
+  src: url("/fonts/Keifont.woff2") format("woff2"),
+       url("/fonts/Keifont.woff") format("woff");
+  font-display: swap;
+}
 
+:root {
+  --font-main: "Somomo", sans-serif;
+}
 
 body {
   font-family: var(--font-main);
@@ -125,3 +135,5 @@ h1::after {
 .header-link:hover {
     color: #002fff;
 }
+
+</tyle>
