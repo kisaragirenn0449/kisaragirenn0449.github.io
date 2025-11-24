@@ -28,18 +28,59 @@ h1::after {
     border-radius: 4px;
 }
 
-p {
+.p {
     text-align: center;
+    font-size: 20px;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 20px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center ;
+  font-size: 35px;
 }
+
+.center-box {
+  display: inline-block;  /* ボックスを中央に配置 */
+  margin: 20px auto;      /* 左右中央に */
+  padding: 15px 25px;     /* 内側の余白 */
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: left;       /* 中の文字は左揃え */
+}
+
+.wrapper {
+  text-align: center;
+  font-size: 20px;
+}
+
+.card {
+  display: inline-block;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  font-size: 20px;
+}
+
+      .text-box {
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
+        padding: 15px 25px;
+        border-radius: 8px;
+        text-align: left;
+        font-size: 20px;
+      }
+
 
 /* ====== ギャラリー ====== */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* PCは3列 */
     gap: 20px;
     max-width: 1200px;
     margin: 20px auto;
@@ -139,7 +180,7 @@ h2 {
 </style>
 
     </head>
-      <body style="font-family: var(--font-main);">
+    <body>
       <header class="header">
         <div class="header-left">
           <h1>にゃるるとの思い出展 | にゃるるについて</h1>
